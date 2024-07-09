@@ -1,7 +1,8 @@
 
 
 const firebase = require('firebase/app');
-require('firebase'); // Ensure Firestore is required
+require('firebase'); 
+// Ensure Firestore is required
 //below is this firebase congif
 const firebaseConfig = {
     apiKey: "AIzaSyA6VlTl_NyGgwW8FypaHd4d2GqNIOE99yQ",
@@ -16,5 +17,6 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 const User = db.collection('Users');
-module.exports = User;//here i am exporting the collection made in my databse to app.js in ordeer to add data
+module.exports = User;
+//here i am exporting the collection made in my databse to app.js in ordeer to add data
 
