@@ -6,12 +6,14 @@ const User = require('./config');
 const cors=require('cors');
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors());//to give permission
 // app.get("/",async(req,res)=> {
 //     const snapshot=await User.get();
 //     const list=snapshot.docs.map((doc)=>({id:doc.id , ...doc.data()}));
 //     res.send(list);
 // })
+
+//ignore the above commented code
 
 app.post("/create", async (req, res) => {
     try {
@@ -28,7 +30,7 @@ app.post("/create", async (req, res) => {
             message: "Internal Server Error"
         });
     }
-});
+});//simple post method to add data to database
 
 const port = 3000;
 app.listen(port, () => {
